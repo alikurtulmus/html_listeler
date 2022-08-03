@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>LİSTE OLUŞTURMAK</h2>
+
+    <p>
+      Listeler sırasız ve sıralı olmak üzere iki çeşittir. <br />
+      Sırasız liste liste elemanlarının başında sembol olan listeler) oluşturmak
+      için "ul" etiketi ve ul etiketi içinde de "li" etiketi kullanılır.
+    </p>
+
+    <ul>
+      <li>liste eleman 1</li>
+      <li>liste eleman 2</li>
+      <li>liste eleman 3</li>
+    </ul>
+
+    <p>
+      Sıralı listeler de "ol" etiketi ve ol etiketi içine "li" etiketi
+      kullanılarak yapılır.
+    </p>
+
+    <ol>
+      <li>liste eleman 1</li>
+      <li>liste eleman 1</li>
+      <li>liste eleman 1</li>
+    </ol>
+
+    <p>
+      Sırasız listelerde nokta yerine farklı semboller de kullanılabilir. Sıralı
+      listelerde de sayı yerine "a,b,c" veya "I, II, III, IV" gibi Roma
+      rakamları da kullanılabilir. Bunun için CSS kodları yazılmalıdır.
+    </p>
+
+    <ul style="list-style-type: circle">
+      <li>liste eleman 1</li>
+      <li>liste eleman 1</li>
+      <li>liste eleman 1</li>
+    </ul>
+    <p>
+      Yukardaki örnekte ul etiketi içinde <'ul style="list-style-type:
+      circle;"/> yazdık ve liste işaretinin çember olmasını sağladık.
+    </p>
+    <ol type="a">
+      <li>liste eleman 1</li>
+      <li>liste eleman 1</li>
+      <li>liste eleman 1</li>
+    </ol>
+    <p>
+      Yukardaki örnekte ol etiketi içinde <'ul style="a"/> yazdık ve liste
+      işaretinin a,b,c şeklinde gitmesini sağladık. a yerine I yazsaydık Roma
+      rakamı şeklinde gitmesini sağlardık.
+    </p>
+
+    <p>
+      <'ol type="a" start="e"> şeklinde yazsaydık e'den başlayarak sıralardı
+    </p>
+
+    <p>
+      Liste içinde liste oluşturmak için alt liste oluşturulmak istenen "li"
+      etiketinin içine "ol" veya "ul" etiketi ile tekrar bir liste
+      oluşturulabilir
+    </p>
+    <ol type="a">
+      <li>liste eleman 1</li>
+      <li>liste eleman 2</li>
+      <li>
+        liste eleman 3
+        <ul style="list-style-type: circle">
+          <li>liste eleman 1</li>
+          <li>liste eleman 1</li>
+          <li>liste eleman 1</li>
+        </ul>
+      </li>
+    </ol>
+
+    <p>
+      Description List HTML5 ile gelen liste türüdür. İsminden de anlaşılacağı
+      üzere tanımlama listeleridir. "dl" etiketi listeyi kapsayan etikettir.
+      "dt" terimi tanımlar, "dd" ise bu terimin açıklaması için kullanılan
+      etikettir.
+    </p>
+
+    <dl>
+      <dt>HTML Kursu</dt>
+      <dd>5 Saat</dd>
+      <dt>CSS Kursu</dt>
+      <dd>8 Saat</dd>
+    </dl>
+
+    <h3>Div ve Span Kullanımı</h3>
+
+    <div id="header">
+      <div id="subdiv">
+        <p>
+          "div" etiketi html'de kullandığımız elemanları mantıksal olarak
+          gruplamamızı sağlar. Normalde elemanlar block olarak tutulur.
+          <span style="background-color: yellow; color: darkred"
+            >"span" etiketi</span
+          >
+          ile istediğimiz bir kısmı doğrudan ayrı bir şekilde gruplayabilir ve
+          özelliklerini değiştirebiliriz. örneğin bu paragrafta yer alan "span
+          etiketi" kısmının arka plan rengini sarı, yazı rengini de kırmızı
+          yaptık. ayrıca sayfayı incelediğinizde de bu kısım ayrı olarak
+          görünecektir.
+        </p>
+        <p>
+          Bu makale div ve span etiketini anlatmak için yazılmıştır. Html div
+          nedir ve nasıl kullanılır ? Div genişliği ve yüksekliği nasıl
+          belirlenir? Css overflow özelliği nedir ? Div, html sayfasında bir
+          bölüm oluşturmak istediğimizde kullanılır.
+        </p>
+      </div>
+
+      <p>
+        div etiketi block etikettir yani bir genişlik değeri (width)
+        vermediğimiz sürece satırı olduğu gibi kaplar ve yükseklik olarakta
+        içerisinde bulunan öğelerin sahip olduğu yükseklik kadar bir yüksekliğe
+        sahip olurlar. Div'lere verdiğimiz genişlik değerleri px cinsinden olmak
+        zorunda değildir. Yüzde olarak da değer verebiliriz. Örneğin tarayıcı
+        genişliği o anda kaç ise div' in genişliğinin sayfanın %70'i kadar
+        olmasını isteyebiliriz. Eğer bir div için bir yükseklik değeri verirsek
+        ve içinde bulunan elemanların yüksekliği div in yüksekliğini aşarsa bu
+        durumda oluşacak overflow yani taşma için bazı seçeneklerimiz vardır.
+      </p>
+      <p>
+        Div etiketi içine de id tanımlatılabilir. Ancak HTML'de elemanlara id
+        tanımlatırken her elemanın id'sinin farklı olması gerekir. Aynı olsa da
+        hata almazsınız çünkü HTML bir programlama dili olmadığı için hata
+        döndüremez ancak mantıksal olarak hatalı olduğu için SEO'nuzu
+        etkileyebilir.
+      </p>
+    </div>
+
+    <p>
+      div ve span etiketlerini iyice anlamanız için sayfanın kodlarını
+      incelemenizde fayda olacaktır.
+    </p>
+
+    <p>
+      div etiketlerine alternatif olarak "form","table", ve "article" semantik
+      etiketlerini kullanabilirsiniz.
+    </p>
+  </body>
+</html>
